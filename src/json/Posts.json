@@ -1,0 +1,20 @@
+{
+  "1": {
+    "id": 1,
+    "imgLink": "https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1440,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1529955163/180625-Torres-childish-gambino-accused-of-plagerism-hero_mufl7f",
+    "title": "Childish Gambino",
+    "content": "AKA Donald Glover"
+  },
+  "2": {
+    "id": 2,
+    "imgLink": "https://cdn.pitchfork.com/longform/624/HeaderALT.jpg",
+    "title": "The National",
+    "content": "cooler than you"
+  },
+  "3": {
+    "id": 3,
+    "imgLink": "https://media1.fdncms.com/metrotimes/imager/u/blog/19741251/shutterstock_232784539.jpg?cb=1548776050",
+    "title": "Bon Iver",
+    "content": "making WI cool again? (was it ever?)"
+  }
+}

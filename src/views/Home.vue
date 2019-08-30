@@ -1,13 +1,11 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
     <HelloWorld msg="Scott's music blog" />
     <div v-html="sample" />
     <div class="main-deck">
       <b-card-group deck>
-        <Card />
-        <Card />
-        <Card />
+        <Card :key="post.title" v-for="post in postData" :post="post" />
       </b-card-group>
     </div>
   </div>
@@ -17,12 +15,14 @@
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
 import Card from "@/components/Card.vue";
+import Posts from "@/json/Posts.json";
 
 export default {
   name: "home",
   data() {
     return {
-      sample: `<p>Some sample inline html for fun</p>`
+      sample: `<p>Sample for vue practice</p>`,
+      postData: Posts
     }
   },
   components: {
