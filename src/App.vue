@@ -1,12 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
+    <NavBar />
+    <!-- <router-link to="/">Home</router-link>|
       <router-link to="/about">About</router-link>
+    </div>-->
+    <div class="container">
+      <router-view />
     </div>
-    <router-view />
   </div>
 </template>
+
+<script>
+// @ is an alias to /src
+import NavBar from "@/components/NavBar.vue";
+
+export default {
+  name: "nav",
+  components: {
+    NavBar
+  }
+};
+</script>
 
 <style>
 #app {
