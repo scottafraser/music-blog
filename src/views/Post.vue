@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <img :src="post.imgLink" />
+  <div v-if="isLoading == false">
+    <img class="picture" :src="post.imgLink" />
     <h1>{{post.title}}</h1>
     <p>{{post.content}}</p>
+    <p v-if="error">{{error}}</p>
   </div>
 </template>
 
@@ -15,8 +16,9 @@ export default {
     return {
       posts: Posts,
       loading: false,
-      post: null,
-      error: null
+      post: {},
+      error: "",
+      isLoading: false
     }
   },
   created() {
@@ -29,12 +31,11 @@ export default {
     '$route': 'fetchData'
   },
   methods: {
-    getPost(id) {
-      // this.posts.map(el => Object.values(el));
-      posts.map(post => {
-        if (post.id === this.$route.params.id) {
+    getPost() {
+      Object.values(this.posts).map((post) => {
+        if (post.id == this.$route.params.id) {
           this.post = post
-        } else {
+        } else if (this.post == {}) {
           this.err = "Not Found"
         }
       })
@@ -49,3 +50,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.picture {
+  max-width: 100%;
+  padding-top: 5%;
+}
+</style>
